@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+	<_name>Laser Cut Preparer</_name>
+	<id>org.inkscape.lasercut.preparer</id>
+	<dependency type="executable" location="extensions">coloreffect.py</dependency>
+	<dependency type="executable" location="extensions">simplestyle.py</dependency>
+	<dependency type="executable" location="extensions">laser_cut_preparer.py</dependency>
+	<param name="fix_colors" type="boolean" _gui-text="Fix colors">true</param>
+	<param name="fix_stroke_width" type="boolean" _gui-text="Fix stroke width">true</param>
+	<effect>
+		<object-type>all</object-type>
+		<effects-menu>
+			<submenu _name="Laser Cut"/>
+		</effects-menu>
+	</effect>
+	<script>
+		<command reldir="extensions" interpreter="python">laser_cut_preparer.py</command>
+	</script>
+</inkscape-extension>
